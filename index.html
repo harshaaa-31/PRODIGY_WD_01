@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenTech</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f2f9f9;
+      color: #00332e;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #d0f0ec;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      z-index: 1000;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      background: #005c50;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00aa88;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #00332e;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00aa88;
+    }
+
+    nav.scrolled .nav-links a {
+      color: #ffffff;
+    }
+
+    nav.scrolled .nav-links a:hover {
+      color: #ffef9f;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581090700227-1e37b1904181') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 4rem;
+    }
+
+    .hero-content {
+      background: rgba(0, 90, 80, 0.8);
+      padding: 2rem;
+      border-radius: 1rem;
+      color: white;
+      text-align: center;
+      max-width: 700px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+      background: #00cc99;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #009977;
+    }
+
+    /* Sections */
+    .section {
+      padding: 6rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(to right, #dffaf6, #eafdfc);
+      border-radius: 1rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #005c50;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="logo">GreenTech</div>
+    <ul class="nav-links">
+      <li><a href="#innovation">Innovation</a></li>
+      <li><a href="#climate">Climate Action</a></li>
+      <li><a href="#solutions">Smart Solutions</a></li>
+      <li><a href="#join">Join Us</a></li>
+      <li><a href="#contact">Reach Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Innovate for a Greener Tomorrow</h1>
+      <p>Be part of the movement to make the planet more sustainable with smart technology and action.</p>
+      <a href="#innovation" class="cta-btn">Explore Now</a>
+    </div>
+  </header>
+
+  <!-- Sections -->
+  <section id="innovation" class="section">
+    <h2>Innovation</h2>
+    <p>We focus on eco-technology that transforms daily life sustainably. AI, IoT, and green energy are key to the future!</p>
+  </section>
+
+  <section id="climate" class="section">
+    <h2>Climate Action</h2>
+    <p>Join campaigns to reduce carbon footprints, support green policies, and promote global climate justice together.</p>
+  </section>
+
+  <section id="solutions" class="section">
+    <h2>Smart Solutions</h2>
+    <p>From smart homes to smart cities, we empower communities with sustainable tech that improves lives and protects nature.</p>
+  </section>
+
+  <section id="join" class="section">
+    <h2>Join Us</h2>
+    <p>Be a volunteer, ambassador, or tech innovator. Collaborate with change-makers to build a sustainable and inclusive future.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Reach Us</h2>
+    <p>Email: hello@greentech.org | Phone: +91 98765 43210 | Office: Chennai, India</p>
+  </section>
+
+  <!-- JavaScript for scroll behavior -->
+  <script>
+    // Add 'scrolled' class to navbar on scroll
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
